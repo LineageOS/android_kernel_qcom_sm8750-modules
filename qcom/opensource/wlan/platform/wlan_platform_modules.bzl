@@ -79,7 +79,7 @@ def _define_modules_for_target_variant(target, variant):
 
     kernel_build = select({
         "//build/qcom_build_extensions:qtisocrepo_true": "//soc-repo:{}_base_kernel".format(tv),
-        "//build/qcom_build_extensions:qtisocrepo_false": "//msm-kernel:{}".format(tv),
+        "//build/qcom_build_extensions:qtisocrepo_false": "//vendor/qcom/kernel:{}".format(tv),
     })
 
     cnss2_enabled = 0
@@ -113,14 +113,14 @@ def _define_modules_for_target_variant(target, variant):
                   "//soc-repo:{}/drivers/soc/qcom/qmi_helpers".format(tv),
                ],
                "//build/qcom_build_extensions:qtisocrepo_false": [
-                  "//msm-kernel:all_headers",
+                  "//vendor/qcom/kernel:all_headers",
                ],
         })
 
         if target != "autogvm" and target != "x1e80100" and target != "sdxkova":
             deps += select({
                   "//build/qcom_build_extensions:qtisocrepo_true": [
-                    "//vendor/qcom/opensource/securemsm-kernel:{}_smcinvoke_dlkm".format(tv),
+                    "//vendor/qcom/sm8750-modules/qcom/opensource/securemsm-kernel:{}_smcinvoke_dlkm".format(tv),
                 ],
                     "//build/qcom_build_extensions:qtisocrepo_false": [],
             })
@@ -205,7 +205,7 @@ def _define_modules_for_target_variant(target, variant):
                 "//soc-repo:{}/drivers/soc/qcom/qcom_aoss".format(tv),
                ],
                "//build/qcom_build_extensions:qtisocrepo_false": [
-                  "//msm-kernel:all_headers",
+                  "//vendor/qcom/kernel:all_headers",
                ],
         })
         ddk_module(
@@ -244,7 +244,7 @@ def _define_modules_for_target_variant(target, variant):
 
     deps = select({
         "//build/qcom_build_extensions:qtisocrepo_true": ["//soc-repo:all_headers"],
-        "//build/qcom_build_extensions:qtisocrepo_false": ["//msm-kernel:all_headers"],
+        "//build/qcom_build_extensions:qtisocrepo_false": ["//vendor/qcom/kernel:all_headers"],
     })
 
     ddk_module(
@@ -287,11 +287,11 @@ def _define_modules_for_target_variant(target, variant):
 
     cnss_utils_dep_list += select({
         "//build/qcom_build_extensions:qtisocrepo_true": ["//soc-repo:all_headers"],
-        "//build/qcom_build_extensions:qtisocrepo_false": ["//msm-kernel:all_headers"],
+        "//build/qcom_build_extensions:qtisocrepo_false": ["//vendor/qcom/kernel:all_headers"],
     })
 
     if target == "sun" or target == "canoe":
-        cnss_utils_dep_list = cnss_utils_dep_list + ["//vendor/qcom/opensource/data-kernel/drivers/smem-mailbox:{}_smem_mailbox".format(tv),]
+        cnss_utils_dep_list = cnss_utils_dep_list + ["//vendor/qcom/sm8750-modules/qcom/opensource/data-kernel/drivers/smem-mailbox:{}_smem_mailbox".format(tv),]
     if target == "sdxkova":
         tgt = "target-aarch64_cortex-a53_musl"
         board = "sdx85"
@@ -320,7 +320,7 @@ def _define_modules_for_target_variant(target, variant):
             "//soc-repo:all_headers",
             "//soc-repo:{}/drivers/soc/qcom/qmi_helpers".format(tv),
         ],
-        "//build/qcom_build_extensions:qtisocrepo_false": ["//msm-kernel:all_headers"],
+        "//build/qcom_build_extensions:qtisocrepo_false": ["//vendor/qcom/kernel:all_headers"],
     })
 
     ddk_module(
@@ -348,7 +348,7 @@ def _define_modules_for_target_variant(target, variant):
               "//soc-repo:{}/drivers/soc/qcom/qmi_helpers".format(tv),
               "//soc-repo:{}/kernel/trace/qcom_ipc_logging".format(tv),
           ],
-          "//build/qcom_build_extensions:qtisocrepo_false": ["//msm-kernel:all_headers"],
+          "//build/qcom_build_extensions:qtisocrepo_false": ["//vendor/qcom/kernel:all_headers"],
       })
 
       ddk_module(
