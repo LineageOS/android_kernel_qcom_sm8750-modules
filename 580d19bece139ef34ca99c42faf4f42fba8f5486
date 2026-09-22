@@ -16,6 +16,24 @@
       "message": "Why is this slightly different from https://github.com/LineageOS/android_kernel_oneplus_sm8650-modules/commit/5b0aea3cdd0d5b1015f3c899714fa77654c51b0e ?",
       "revId": "580d19bece139ef34ca99c42faf4f42fba8f5486",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f50be9ff_7bc37884",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-09-22T20:45:56Z",
+      "side": 1,
+      "message": "Whatever.",
+      "parentUuid": "7f1ccb91_70dd18f8",
+      "revId": "580d19bece139ef34ca99c42faf4f42fba8f5486",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
