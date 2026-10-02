@@ -16,6 +16,24 @@
       "message": "Is this something we\u0027d want?",
       "revId": "833e139b9254ecd940997d7ec20fac41f0d8f54c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "119f834a_3ec8b94b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 37713
+      },
+      "writtenOn": "2026-10-02T04:18:04Z",
+      "side": 1,
+      "message": "kiwi_v2 fails to build without this\n\n/home/nullcode/infinity-17/kernel/oneplus/sm8750/../sm8750-modules/qcom/opensource/display-drivers/msm/..//msm/iris/vendor/Kbuild:5: The vendor module of pixelworks iris will be added to the kernel\nERROR: modpost: \"os_if_dp_set_lpc_configure\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"os_if_dp_get_lpc_state\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"set_monitor_mode_policy\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"os_if_dp_local_pkt_capture_stop\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"os_if_lpc_mon_intf_creation_allowed\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"dp_local_pkt_capture_tx_config\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"dp_mon_soc_attach_2_0\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"dp_mon_pdev_htt_srng_setup_2_0\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"dp_mon_soc_detach_2_0\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nERROR: modpost: \"dp_mon_soc_init_2_0\" [../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/qca_cld3_kiwi_v2.ko] undefined!\nWARNING: modpost: suppressed 9 unresolved symbol warnings because there were too many)\nmake[4]: *** [/home/nullcode/infinity-17/kernel/oneplus/sm8750/scripts/Makefile.modpost:211: ../sm8750-modules/qcom/opensource/wlan/qcacld-3.0/.kiwi_v2/Module.symvers] Error 1\nmake[3]: *** [/home/nullcode/infinity-17/kernel/oneplus/sm8750/Makefile:2018: modpost] Error 2\nmake[2]: *** [/home/nullcode/infinity-17/kernel/oneplus/sm8750/Makefile:252: __sub-make] Error 2\nmake[1]: *** [Makefile:252: __sub-make] Error 2\nmake: *** [Makefile:65: all] Error 2\nFAILED: ninja:",
+      "parentUuid": "52cccb69_8a90352a",
+      "revId": "833e139b9254ecd940997d7ec20fac41f0d8f54c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
