@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e558f21_2d0c2292",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-10-08T01:25:22Z",
+      "side": 1,
+      "message": "By the way, this is only a problem with legacy kernel builds. Stock doesn\u0027t have this issue because they use Bazel.",
+      "revId": "fe09fd0b6d3d713fc36142d7d0838eed23cb1229",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
